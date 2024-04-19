@@ -1,0 +1,18 @@
+( App support words. )
+
+( Prints the app name. ) 
+: PRINT-APP-NAME
+    S" AppName: " TYPE GET-AppName TYPE CR
+;
+
+( Prints the app version. )
+: PRINT-APP-VERSION
+    S" AppVersion: " TYPE GET-AppVersion TYPE CR
+;
+
+( Prints the "---" separator. )
+: PRINT-SEPARATOR
+    S" ---" TYPE CR
+;
+
+S" Common app words loaded." DEBUG

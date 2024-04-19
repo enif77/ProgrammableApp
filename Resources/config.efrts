@@ -1,0 +1,28 @@
+( Main app config. )
+
+\ Enable/disable the debug messages output.
+0 S" DebugEnabled" SET
+
+\ Include helper words for the config.
+S" Resources/config-included.efrts" INCLUDE-SCRIPT
+
+
+\ --- Configuration ---
+
+\ The "bla" variable is set to 1000.
+1000 S" bla" SET
+S" Whaaat?" S" what" SET
+
+\ App related variables are set using the SET word directly.
+1 S" AppVersion" SET
+S" Programmable App 1" S" AppName" SET
+
+\ App related variables are set using the specialised words.
+\ See the config-included script.
+123 SET-AppVersion
+S" Programmable App" SET-AppName
+
+\ --- Configuration end ---
+
+\ Debug info, that the configuration was loaded.
+S" Configuration loaded." DEBUG

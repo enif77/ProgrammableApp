@@ -1,0 +1,19 @@
+( --- Predefined words for config --- )
+
+: GET-AppName   ( -- app-name )
+    S" AppName" GET
+;
+
+: SET-AppName   ( app-name -- )
+    S" AppName" SET
+;
+
+: GET-AppVersion   ( -- app-version )
+    S" AppVersion" GET
+;
+
+: SET-AppVersion   ( app-version -- )
+    S" AppVersion" SET
+;
+
+S" Common config words loaded." DEBUG

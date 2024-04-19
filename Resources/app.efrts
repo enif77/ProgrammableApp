@@ -1,0 +1,41 @@
+\ The app config.
+S" Resources/config.efrts" INCLUDE-SCRIPT
+
+\ The shared words definition.
+S" Resources/app-included.efrts" INCLUDE-SCRIPT
+
+\ The app script body.
+HELLO
+
+PRINT-SEPARATOR
+
+GET-APP-STATE-JSON TYPE CR
+
+PRINT-SEPARATOR
+
+PRINT-APP-NAME
+PRINT-APP-VERSION
+
+S" DebugEnabled: " TYPE S" DebugEnabled" GET TYPE CR
+
+123 S" IntValue" SET
+12.3 S" FloatValue" SET
+1.23 S" DoubleValue" SET
+0.123 S" DecimalValue" SET
+
+PRINT-SEPARATOR
+
+S" IntValue: " TYPE S" IntValue" GET TYPE CR
+S" FloatValue: " TYPE S" FloatValue" GET TYPE CR
+S" DoubleValue: " TYPE S" DoubleValue" GET TYPE CR
+S" DecimalValue: " TYPE S" DecimalValue" GET TYPE CR
+
+\ Variables update test.
+2000 S" bla" SET
+S" Oops!" S" what" SET
+
+\ Variable removed test.
+S" what" REMOVE-VARIABLE
+
+\ Variable adde again test 
+S" Shit!" S" what" SET
